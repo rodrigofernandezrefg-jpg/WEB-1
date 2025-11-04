@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    background: #c4c6ca;
+    background: linear-gradient(to right, #c4c6ca, #c9c9d3);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: coral;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+nav a {
+    padding: 10px;
+}
+
+.div-deslizador img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.div-deslizador {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    height: 576px;
+    width: 1134px;
+    border-radius: 15px;
+    margin: 5px;
+    object-fit: cover;
+
+}
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-carrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.texto-deslizador {
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    transform: translateY(0px);
+    margin-bottom: 9px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(63, 106, 138, 0.21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.texto-deslizador h3 {
+    text-shadow: 0px 0px 15px black;
+    padding-top: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 27px;
+}
+
+.texto-deslizador p {
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-size: 0px;
+}
+
+.slider-carrusel:hover .texto-deslizador {
+    transition: height 1s, transform 1s, background-color 1s;
+    transform: translateY(-150px);
+    height: 300px;
+    background-color: rgba(128, 136, 141, 0.09);
+}
+
+.slider-carrusel:hover .texto-deslizador p {
+    transition: font-size 0s .2s linear;
+    font-size: 23px;
+    font-weight: 300;
+
+    text-shadow: 0px 0px 10px #000000;
+}
+
+.contenedor-barra {
+    width: 100%;
+    max-width: 55px;
+    position: fixed;
+    left: 0;
+    top: 25%;
+    height: 100%;
+    max-height: 110px;
+    background-color: rgb(10, 10, 10);
+    border-top: 5px solid rgb(10, 10, 10);
+    border-right: 5px solid rgb(10, 10, 10);
+    border-radius: 0px 4px 4px 0px;
+}
+
+.contenedor-barra a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: all 500ms ease;
+    color: #fff;
+}
+
+.contenedor-barra:hover a {
+    background: #1c1c1c;
+}
+
+.contenedor-barra #title {
+    position: absolute;
+    background: #1c1c1c;
+    padding: 0px 8px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 15px;
+    top: 12px;
+    left: 0px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.contenedor-barra a:hover #title {
+    opacity: 1;
+    visibility: visible;
+    left: 64px;
+}
+
+.contenedor-barra #title:after {
+    position: absolute;
+    content: "";
+    border-left: 7px solid transparent;
+    border-right: 6px solid #1c1c1c;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    right: 100%;
+    top: 8px;
+}
+
+.iconosocial {
+    transition: all 0.4s;
+    transform: translateX(0%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-barra .icono-insta {
+    background: #e4dfe2;
+    border-radius: 5px;
+}
+
+.contenedor-barra .icono-tiktoka {
+    background: #201e1f;
+    border-radius: 0px 0px 5px 0px;
+}
