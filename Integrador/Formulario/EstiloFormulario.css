@@ -91,6 +91,16 @@ form textarea:focus {
      border-bottom: 2px solid #111827; 
 }
 
+form h1 {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
     label, h1{
       display: block;
       margin-top: 15px;
